@@ -19,7 +19,7 @@ const SavedSnippets = ({ snippets, onRemove, onSelect }) => {
     return (
       <Card sx={{ mt: 4, bgcolor: 'rgba(255, 255, 255, 0.95)' }}>
         <CardContent>
-          <Typography color="text.secondary" textAlign="center">
+          <Typography color="text.primary" textAlign="center">
             No saved snippets yet. Click the bookmark icon to save snippets for later!
           </Typography>
         </CardContent>
@@ -29,7 +29,7 @@ const SavedSnippets = ({ snippets, onRemove, onSelect }) => {
 
   return (
     <Box sx={{ mt: 4 }}>
-      <Typography variant="h6" sx={{ mb: 2, color: 'white' }}>
+      <Typography variant="h6" sx={{ mb: 2, color: 'text.primary' }}>
         Saved Snippets
       </Typography>
       {snippets.map((snippet) => (
@@ -37,7 +37,7 @@ const SavedSnippets = ({ snippets, onRemove, onSelect }) => {
           <CardContent>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
               <CodeIcon sx={{ color: 'primary.main' }} />
-              <Typography variant="subtitle1" sx={{ flex: 1 }}>
+              <Typography variant="subtitle1" sx={{ flex: 1, color: 'text.primary' }}>
                 {snippet.title}
               </Typography>
               <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
@@ -74,7 +74,7 @@ const SavedSnippets = ({ snippets, onRemove, onSelect }) => {
             </Box>
             <Collapse in={expandedId === snippet.id}>
               <Box sx={{ mt: 2 }}>
-                <Typography variant="body2" color="text.secondary" paragraph>
+                <Typography variant="body2" color="text.primary" paragraph>
                   {snippet.explanation}
                 </Typography>
                 <pre className="language-javascript line-numbers">
